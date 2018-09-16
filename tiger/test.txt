@@ -1,5 +1,17 @@
-master分支
-jenkins自动化构建通知
+锘縨aster锟斤拷支
+jenkins锟皆讹拷锟斤拷锟斤拷锟斤拷通知
 testss
 
 testssad
+
+鎴戜滑
+
+
+docker run -p 8080:8080 jenkinsci/blueocean
+
+admin a8319b9217a347c4bbf816ea1f16aebd
+
+
+Access token must have the following scopes: "repos" and "user:email"
+
+557e255c821fa240b566d1191f29c6ea9010a2ef token

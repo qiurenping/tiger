@@ -1,13 +1,38 @@
 
-# VMware
-VMware 2018 v14.x 永久许可证激活密钥
+# GitHub配置
 
-FF31K-AHZD1-H8ETZ-8WWEZ-WUUVA
+**连接Token**：7c3deb27b02651ec09e5094ef19657a32519bdd1
 
-CV7T2-6WY5Q-48EWP-ZXY7X-QGUWD
 
-# 虚拟机
+ 自启动
 
-# GitHub
+    FROM centos:7
+    ENV container docker
+    RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
+    systemd-tmpfiles-setup.service ] || rm -f $i; done); \
+    rm -f /lib/systemd/system/multi-user.target.wants/*;\
+    rm -f /etc/systemd/system/*.wants/*;\
+    rm -f /lib/systemd/system/local-fs.target.wants/*; \
+    rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
+    rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
+    rm -f /lib/systemd/system/basic.target.wants/*;\
+    rm -f /lib/systemd/system/anaconda.target.wants/*;
+    VOLUME [ "/sys/fs/cgroup" ]
+    CMD ["/usr/sbin/init"]
 
-* token：7c3deb27b02651ec09e5094ef19657a32519bdd1
+构建httpd Dockerfile
+
+        FROM local/c7-systemd
+        RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
+        EXPOSE 80
+        CMD ["/usr/sbin/init"]
+
+ 构建Java Dockerfile
+
+     FROM centos-201908282053
+     RUN yum -y install glibc.i686
+     ADD jdk-8u191-linux-i586.tar.gz /opt/jdk-8u191
+     ENV JAVA_HOME /opt/jdk-8u191/jdk1.8.0_191
+     ENV PATH $JAVA_HOME/bin:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$PATH
+     EXPOSE 80
+     CMD ["/usr/sbin/init"]

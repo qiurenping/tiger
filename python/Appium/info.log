@@ -1,0 +1,10 @@
+2020-03-11 13:52:41,582 - desired_caps.py[line:40] - INFO - info
+2020-03-11 13:52:41,582 - desired_caps.py[line:41] - ERROR - error
+2020-03-11 13:52:41,587 - desired_caps.py[line:34] - INFO - start app...
+2020-03-11 13:53:08,881 - common_fun.py[line:19] - INFO - ==========check_cancelBtn=========
+2020-03-11 13:53:09,500 - common_fun.py[line:28] - INFO - =========check skipBtn=============
+2020-03-11 13:53:10,486 - common_fun.py[line:62] - INFO - ====check_market_ad====
+2020-03-11 13:53:11,252 - common_fun.py[line:68] - INFO - close market ad
+2020-03-11 13:53:11,291 - common_fun.py[line:43] - INFO - swipeLeft
+2020-03-11 13:53:12,758 - common_fun.py[line:57] - INFO - D:/测试文档/python/Appium/screenshots/startApp_2020-03-11 13_53_12.png
+2020-03-11 13:53:12,759 - common_fun.py[line:58] - INFO - get startApp screenshot

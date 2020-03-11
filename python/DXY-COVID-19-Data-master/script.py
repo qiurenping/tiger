@@ -1,10 +1,3 @@
-"""
-@ProjectName: DXY-2019-nCoV-Crawler
-@FileName: script.py
-@Author: Jiabao Lin
-@Date: 2020/1/31
-"""
-#from git import Repo
 from pymongo import MongoClient
 import os
 import json

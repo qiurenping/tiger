@@ -5,4 +5,4 @@ for i in range(100,999):
 	m = i%100/10
 	n = i%100%10
 	if j**3 + m**3 + n**3 == i:
-		print i
+		print(i)

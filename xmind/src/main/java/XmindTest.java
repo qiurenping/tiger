@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XmindTest {
-
     private static IWorkbookBuilder builder = null;
     private static List<String> list = new ArrayList();
 
